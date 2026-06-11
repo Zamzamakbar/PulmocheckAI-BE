@@ -1,0 +1,13 @@
+models:
+  Patient:
+    name: string
+    result: string
+    label: nullable string
+    image: string
+    user_id: foreign
+
+controllers:
+  Patient:
+    resource: api
+  User:
+    resource: api

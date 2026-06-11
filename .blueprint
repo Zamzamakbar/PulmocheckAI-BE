@@ -1,0 +1,21 @@
+created:
+    - app/Http/Controllers/PatientController.php
+    - app/Http/Controllers/UserController.php
+    - database/factories/PatientFactory.php
+    - database/migrations/2024_05_28_064407_create_patients_table.php
+    - app/Models/Patient.php
+    - tests/Feature/Http/Controllers/PatientControllerTest.php
+    - tests/Feature/Http/Controllers/UserControllerTest.php
+    - app/Http/Requests/PatientStoreRequest.php
+    - app/Http/Requests/PatientUpdateRequest.php
+    - app/Http/Requests/UserStoreRequest.php
+    - app/Http/Requests/UserUpdateRequest.php
+    - app/Http/Resources/PatientCollection.php
+    - app/Http/Resources/PatientResource.php
+    - app/Http/Resources/UserCollection.php
+    - app/Http/Resources/UserResource.php
+updated:
+    - routes/api.php
+models:
+    User: { name: string, email: string, email_verified_at: 'timestamp nullable default:NULL', password: string, role: "enum:'admin','doctor'", remember_token: 'string:100 nullable default:NULL' }
+    Patient: { name: string, result: string, label: 'nullable string', image: string, user_id: foreign }
